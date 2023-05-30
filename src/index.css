@@ -1,13 +1,66 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  width: 100%;
+  height: 300px !important;
+  margin: 0 auto !important;
+  position: relative;
+}
+.item {
+  transition: 0.3s ease-in-out all;
+}
+.item:hover {
+  box-shadow: 3px 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 8px 0 rgba(0, 0, 0, 0.06);
+ 
+}
+.layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
+.outer-con{
+  position: relative;
+}
+.refresh{
+  position: absolute;
+  right: 46.8%;
+ margin-top: 7px;
+}
+span {
+  background-color: rgb(94, 224, 140);
+  position: absolute;
+}
+
+/* media query */
+@media screen and (max-width: 960px) {
+  .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 630px) {
+  .layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .outer-con {
+    margin-right: -30px;
+  }
+  .title_underline{
+  margin: 0 auto !important;
+  }
+  .refresh{
+    right:38.5%;
+  }
 }
